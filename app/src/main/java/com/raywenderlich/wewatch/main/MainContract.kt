@@ -2,8 +2,9 @@ package com.raywenderlich.wewatch.main
 
 class MainContract {
     interface PresenterInterface {
-//TODO: add interface methods for Presenter
+        fun getMyMoviesList()
     }
+
     interface ViewInterface {
 //TODO: add interface methods for View
     }

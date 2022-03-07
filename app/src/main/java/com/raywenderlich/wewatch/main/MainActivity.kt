@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setupPresenter()
         setupViews()
     }
 
