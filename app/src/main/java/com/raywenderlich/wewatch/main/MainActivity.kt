@@ -68,6 +68,12 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
 
     private val TAG = "MainActivity"
 
+    private lateinit var mainPresenter: MainContract.PresenterInterface
+    private fun setupPresenter() {
+        val dataSource = LocalDataSource(application)
+        mainPresenter = MainPresenter(this, dataSource)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
