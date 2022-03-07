@@ -84,8 +84,7 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
 
     override fun onStart() {
         super.onStart()
-        dataSource = LocalDataSource(application)
-        getMyMoviesList()
+        mainPresenter.getMyMoviesList()
     }
 
     override fun onStop() {
