@@ -133,19 +133,7 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
             }
         }
 
-    fun displayMovies(movieList: List<Movie>?) {
-        if (movieList == null || movieList.size == 0) {
-            Log.d(TAG, "No movies to display.")
-            moviesRecyclerView.visibility = INVISIBLE
-            noMoviesLayout.visibility = VISIBLE
-        } else {
-            adapter.movieList = movieList
-            adapter.notifyDataSetChanged()
 
-            moviesRecyclerView.visibility = VISIBLE
-            noMoviesLayout.visibility = INVISIBLE
-        }
-    }
 
     //fab onClick
     fun goToAddMovieActivity(v: View) {
