@@ -170,6 +170,19 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun displayMovies(movieList: List<Movie>) {
+        adapter.movieList = movieList
+        adapter.notifyDataSetChanged()
+        moviesRecyclerView.visibility = VISIBLE
+        noMoviesTextView.visibility = INVISIBLE
+    }
+
+    override fun displayNoMovies() {
+        Log.d(TAG, "No movies to display.")
+        moviesRecyclerView.visibility = INVISIBLE
+        noMoviesTextView.visibility = VISIBLE
+    }
+
     fun displayMessage(message: String) {
         Toast.makeText(this@MainActivity, message, Toast.LENGTH_LONG).show()
     }
