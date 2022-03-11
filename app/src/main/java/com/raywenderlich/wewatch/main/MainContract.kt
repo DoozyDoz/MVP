@@ -5,6 +5,7 @@ import com.raywenderlich.wewatch.model.Movie
 class MainContract {
     interface PresenterInterface {
         fun getMyMoviesList()
+        fun stop()
     }
 
     interface ViewInterface {

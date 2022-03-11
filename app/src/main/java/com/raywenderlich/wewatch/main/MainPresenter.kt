@@ -48,5 +48,9 @@ class MainPresenter(
         compositeDisposable.add(myMoviesDisposable)
     }
 
+    override fun stop() {
+        compositeDisposable.clear()
+    }
+
 
 }

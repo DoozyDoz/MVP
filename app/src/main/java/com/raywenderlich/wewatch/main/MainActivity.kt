@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
 
     override fun onStop() {
         super.onStop()
-        compositeDisposable.clear()
+        mainPresenter.stop()
     }
 
     private fun setupViews() {
@@ -183,11 +183,11 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
         noMoviesTextView.visibility = VISIBLE
     }
 
-    fun displayMessage(message: String) {
+    override fun displayMessage(message: String) {
         Toast.makeText(this@MainActivity, message, Toast.LENGTH_LONG).show()
     }
 
-    fun displayError(message: String) {
+    override fun displayError(message: String) {
         displayMessage(message)
     }
 
