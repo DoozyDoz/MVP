@@ -174,13 +174,13 @@ class MainActivity : AppCompatActivity(), MainContract.ViewInterface {
         adapter.movieList = movieList
         adapter.notifyDataSetChanged()
         moviesRecyclerView.visibility = VISIBLE
-        noMoviesTextView.visibility = INVISIBLE
+        noMoviesLayout.visibility = INVISIBLE
     }
 
     override fun displayNoMovies() {
         Log.d(TAG, "No movies to display.")
         moviesRecyclerView.visibility = INVISIBLE
-        noMoviesTextView.visibility = VISIBLE
+        noMoviesLayout.visibility = VISIBLE
     }
 
     override fun displayMessage(message: String) {
